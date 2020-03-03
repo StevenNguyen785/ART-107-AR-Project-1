@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<!-- A-Frame Image documentation: https://aframe.io/docs/1.0.0/primitives/a-image.html -->
+<!-- Build a basic scene tut is very helpful: https://aframe.io/docs/1.0.0/guides/building-a-basic-scene.html#sidebar-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Video</title>
+  <script src="aframe.min.js"></script>
+  <script src="aframe-ar.js"></script>
+</head>
+
+<body>
+
+  <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+
+    <!-- first you preload the images into the A-frame asset management system -->
+    <a-assets>
+      <video id="GLCh1" autoplay loop="true" src="assets/GLCh1.mp4"></video>
+      <video id="GLCh2" autoplay loop="true" src="assets/GLCh2.mp4"></video>
+      <video id="GLCh3" autoplay loop="true" src="assets/GLCh3.mp4"></video>
+      <video id="GLCh4" autoplay loop="true" src="assets/GLCh4.mp4"></video>
+      <video id="GLCh5" autoplay loop="true" src="assets/GLCh5.mp4"></video>
+    </a-assets>
+
+
+    <a-marker type="barcode" value="1">
+      <!-- Using the asset management system the src link is the #id you gave it above-->
+      <!-- Note the width and height keep your video size in proportion.
+      A 16 x 9 video should have a width:height ratio of 1.77 -->
+      <a-video src="#GLCh1" width="3" height="1.69" rotation="240 0 0" position="0 -1.69 0"></a-video>
+
+    </a-marker>
+
+    <a-marker type="barcode" value="2">
+
+      <a-video src="#GLCh2" width="3" height="1.69" rotation="240 0 0" position="0 -1.69 0"></a-video>
+
+    </a-marker>
+
+    <a-marker type="barcode" value="3">
+
+      <a-video src="#GLCh3" width="3" height="1.69" rotation="240 0 0" position="0 -1.69 0"></a-video>
+
+    </a-marker>
+
+    <a-marker type="barcode" value="4">
+
+      <a-video src="#GLCh4" width="3" height="1.69" rotation="240 0 0" position="0 -1.69 0"></a-video>
+
+    </a-marker>
+
+    <a-marker type="barcode" value="5">
+
+      <a-video src="#GLCh5" width="3" height="1.69" rotation="240 0 0" position="0 -1.69 0"></a-video>
+
+    </a-marker>
+
+    <a-entity camera=""></a-entity>
+  </a-scene>
+
+
+</body>
+
+</html>
